@@ -282,6 +282,8 @@ class _MsprimeEngine(Engine):
                 position=recombination_map.position,
                 rate=recombination_map.rate * (1 - gc_frac),
             )
+            print("gc_rate", gc_rate)
+            print("crossover_rate", contig.recombination_map.mean_rate)
 
         ts = msprime.sim_ancestry(
             samples=sample_sets,
