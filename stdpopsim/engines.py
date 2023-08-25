@@ -277,7 +277,7 @@ class _MsprimeEngine(Engine):
         elif (gc_frac is not None) and (gc_frac > 0.0):
             # the recombination map is a map of double-stranded breaks,
             # so we need to separate out GC from crossovers
-            gc_rate = contig.recombination_map.mean_rate * gc_frac / (1 - gc_frac)
+            gc_rate = contig.recombination_map.mean_rate * gc_frac
             recombination_map = msprime.RateMap(
                 position=recombination_map.position,
                 rate=recombination_map.rate * (1 - gc_frac),
